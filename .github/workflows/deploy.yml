@@ -23,10 +23,10 @@ jobs:
         with: 
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/linux/Documents/web-example-golang
+            cd /home/ubuntu/service/web-example-golang
             ls -lah
             docker rm -f web-goapp && docker rmi handrywahyudi/goapp:latest
             docker-compose -f docker-compose.yml up -d

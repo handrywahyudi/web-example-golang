@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM golang:bullseye
+FROM golang:1.16-alpine
 
 LABEL authors="sihandry@gmail.com"
 
